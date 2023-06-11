@@ -13,7 +13,7 @@ class DroneFlying(Node):
         self.drone.connect()
         
         self.sub = self.create_subscription(String, 'gestures', self.send_command, 1)
-        self.image_counter = 0  # Counter for captured images
+
 
     def send_command(self, msg):
         command = msg.data
